@@ -1,0 +1,21 @@
+{
+  "name": "studentmngt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "sass --no-source-map --watch styles/main.scss public/css/main.css"
+  },
+  "author": "rachelyn/jan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "sass": "^1.52.3"
+  }
+}
