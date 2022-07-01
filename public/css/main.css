@@ -235,6 +235,7 @@ html {
 @media (max-width: 860px) {
   #banner .container__heading {
     font-size: 6rem;
+    /* margin-bottom: 3rem; */
   }
 }
 @media (max-width: 470px) {

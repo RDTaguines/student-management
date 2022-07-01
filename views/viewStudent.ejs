@@ -173,6 +173,10 @@ img{
     height: 50px;
     width: 250px;
 }
+.img-responsive{
+    height: 250px;
+    width: 250px;
+}
 </style>
 </head>
 <body>
@@ -209,7 +213,7 @@ img{
         <form class="mt-5">
             <div class="row mb-5">
                 <div class="image-profile form-group col-lg-3">
-                    <img alt="User Pic" src="http://localhost:5050/images/uploaded_images/<%= records.image %>" class="img-circle img-responsive">
+                    <img alt="User Pic" src="http://localhost:2000/images/uploaded_images/<%= records.image %>" class="img-responsive">
                 </div>
                 <div class="profile-details form-group col-lg-9">
                     <div class="details">
@@ -244,9 +248,7 @@ img{
                 <div class="form-group col-lg-4">
                     <label for="dob" class="other-label">Date of Birth :</label>
                     <p class="description"> 
-                        <% let date = records.dob %>
-                        <% let birthDate = date.toLocaleDateString() %>
-                        <%= birthDate %>
+                        <%= records.dob %>
                     </p>
                 </div>
                 <div class="form-group col-lg-4">

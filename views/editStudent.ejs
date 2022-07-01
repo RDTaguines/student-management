@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <title>Document</title>
 <style>
-*{
-    border: 1px solid black;
-}
 html,
 body {
     overflow-x: hidden;
@@ -153,9 +150,11 @@ a.nav-link{
     font-weight: bold;
     font-size: 1.5rem;
 }
-.img-circle{
+.img-responsive{
     box-shadow: 5px 8px 5px #888888; 
     margin-bottom: 15px;
+    height: 250px;
+    width: 250px;
 }
 
 img{
@@ -197,8 +196,8 @@ img{
 
         <form action="/dashboard/edit/<%= records.studentID %>" method="post" class="mt-5">
             <div class="row">
-                <div class="form-group col-lg-3" style="padding-top:240px;">
-                    <img alt="User Pic" src="http://localhost:5050/images/uploaded_images/<%= records.image %>" class="img-circle img-responsive">
+                <div class="form-group col-lg-3">
+                    <img alt="User Pic" src="http://localhost:2000/images/uploaded_images/<%= records.image %>" class="img-responsive">
                     <input type="file" class="form-control" id="image_name" name="image_name" value="<%= records.image %>">
                 </div>
                 <div class="profile-details form-group col-lg-9">
