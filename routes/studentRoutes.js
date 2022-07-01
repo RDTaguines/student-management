@@ -10,7 +10,7 @@ const viewRecordsController = require('../controller/viewRecordsController.js');
 const editRecordsController = require('../controller/editRecordsController.js');
 const addRecordsController = require('../controller/addRecordsController.js');
 const viewDetailsController = require('../controller/viewDetailsController.js');
-const loginValidation = require('../middleware/validation.js');
+const { loginValidation } = require('../middleware/validation.js')
 
 //static view
 

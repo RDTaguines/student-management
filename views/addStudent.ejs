@@ -236,7 +236,7 @@ img{
                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email">
                 </div>
             </div>
-            <button type="submit" class="btn_save">Save Changes</button>
+            <input type="submit" class="btn_save" value="Save Changes" id="save">
         </form>
     </div>
 </body>
@@ -254,20 +254,19 @@ img{
             window.onload = function () {
                 console.log("window is loaded");
         };
-        $('.btn_save').on('click', function(e) {
-            e.preventDefault();
-            var self = $(this);
-            console.log(self.data('title'));
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Your work has been saved',
-                showConfirmButton: false,
-                timer: 1500
-            })
-        })
 
-        
+        // $('#save').on('click', function(e) {
+        //     e.preventDefault();
+        //     var self = $(this);
+        //     // console.log(self.data('title'));
+        //     Swal.fire({
+        //         position: 'top-end',
+        //         icon: 'success',
+        //         title: 'Your work has been saved',
+        //         showConfirmButton: false,
+        //         timer: 1500
+        //     })
+        // })   
     </script>
 
     
