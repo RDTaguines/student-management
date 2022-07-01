@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Document</title>
+<style>
+html,
+body {
+    overflow-x: hidden;
+}
+body {
+    padding-top: 56px;
+    background: linear-gradient(rgba(255, 254, 254, 0.818),rgba(255, 255, 255, 0.795)),url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.offcanvas-collapse {
+    position: fixed;
+    top: 75px;
+    bottom: 0;
+    right: 100%;
+    left: -300px;
+    width: 300px;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color:#DCD0D0;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+    z-index: -1;
+}
+
+.offcanvas-collapse {
+    align-items: start;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    box-shadow: 5px 10px 8px #888888; 
+
+}
+
+.offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
+}
+
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 0;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+    color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+    color: #DCD0D0;
+}
+
+.nav-underline .active {
+    font-weight: 500;
+    color: #343a40;
+}
+ul{
+    width: 100%;
+}
+a.nav-link{
+    background-color: #7C3E66;
+    color: #DCD0D0;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 5px 10px 8px #888888; 
+    border-radius: 10px;
+}
+table .text-light{
+    background-color: #243A73;
+}
+table tbody{
+    background-color: white;
+}
+.btn_back{
+    background-color:#243A73;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #888888; 
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+.btn_back:hover{
+    text-decoration: none;
+    color: white;
+    background-color:#7C3E66;
+}
+.btn_add{
+    background-color: #243A73;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #888888; 
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn_add:hover{
+    text-decoration: none;
+    color: white;
+    background-color:#7C3E66;
+}
+
+#search{
+    height: 50px;
+    border-radius: 12px;
+}
+.col-xl-3{
+    padding-top: 12px;
+}
+.overflow{
+    height: 35rem;
+    overflow: scroll;
+    
+}
+img{
+    height: 50px;
+    width: 250px;
+}
+.heading{
+    font-size: 50px;
+    color:#243A73 ;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow navbar-dark navbar-offcanvas" style="background-color: #7C3E66;">
+        <a class="navbar-brand mr-auto" href=""><img src="/img/logo.png"></a>
+
+        <h4 class="ml-auto text-light mt-2"> Welcome : ADMIN &nbsp; &nbsp;</h4>
+
+        <button class="navbar-toggler d-block" type="button" id="navToggle">                         
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse offcanvas-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard"> <i class="bi bi-person-fill"></i> &nbsp;Dashboard  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard/manage-student"> <i class="bi bi-people-fill"></i> &nbsp;Manage Student<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-center" href="/dashboard/add"> <i class="bi bi-person-plus-fill"></i> &nbsp; Add Student<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-5">
+        <div>
+            <h1 class="heading">MANAGE STUDENT</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-7">
+                <a href="" class="btn_back"> <i class="bi bi-arrow-left-circle"></i> &nbsp; Back </a>
+            </div>
+            <div class="col-xl-5">
+                <h3 class="ml-5">Total number of students [7]</h3>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xl-9">
+                <input type="search" name="" id="search" class="w-100">
+            </div>
+            <div class="col-xl-3">
+                <a href="/dashboard/add"class="btn_add"><i class="bi bi-plus-circle"></i> &nbsp;Add Student</a>
+            </div>
+        </div>
+        <br>
+        <div class="overflow">
+            <table class="table table-bordered table-stripe table-hover">
+                <thead class="text-light text-center">
+                    <tr>
+                        <th>Student ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <% records.forEach(function(tblstudents) { %>
+                    <tr class="text-center">
+                        <td><%= tblstudents.studentID %></td>
+                        <td><%= tblstudents.first_name %></td>
+                        <td><%= tblstudents.last_name %></td>
+                        <td><%= tblstudents.gender %></td>
+                        <td><%= tblstudents.email %></td>
+                        <td class="text-center">
+                            <a href="/dashboard/view/<%= tblstudents.studentID %>" class="btn btn-info"> <i class="bi bi-search"></i>&nbsp;View</a>
+                            <a href="/dashboard/edit/<%= tblstudents.studentID %>" class="btn btn-success ml-1"><i class="bi bi-pencil-square"></i>&nbsp;Edit</a>
+                        </td>
+                    </tr> 
+                    <% }) %>
+                </tbody>
+            
+            </table>
+        </div>
+        
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+    console.log("document is ready");
+    $('[data-toggle="offcanvas"], #navToggle').on('click', function () {
+        $('.offcanvas-collapse').toggleClass('open')
+    })
+});
+window.onload = function () {
+    console.log("window is loaded");
+};
+</script>
+</body>
+</html>

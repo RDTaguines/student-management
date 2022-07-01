@@ -5,7 +5,7 @@ const view_details = (req, res) => {
     let sql = `SELECT * from tblstudents WHERE studentID = ${id}`;
     let query = newConnection.query(sql, (err, result) =>{
         if(err) throw err;
-        res.render('dashboard/viewStudent', {
+        res.render('viewStudent', {
             records : result[0],
             title: "Records"
         });

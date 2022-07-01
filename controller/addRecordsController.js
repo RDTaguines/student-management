@@ -3,7 +3,7 @@ const newConnection = require('../lib/mySqlDb.js');
 
 //add student view
 const add_view = (req, res) =>{
-    res.render('./dashboard/addStudent', {header:'Add Student', message:'Add Student', });
+    res.render('addStudent', {header:'Add Student', message:'Add Student', });
 }
 
 //add student
@@ -30,11 +30,11 @@ const add_student = (req, res) =>{
                     let sql = "INSERT INTO `tblstudents` (`first_name`, `last_name`, `address`, `gender`, `dob`, `email`, `image`) VALUES ('"+ firstName +"', '"+ lastName +"', '"+ address +"', '"+ gender +"', '"+ dob +"', '"+ email +"', '"+ img_name +"')"; 
                     let query = newConnection.query(sql, (err, results)=>{
                         if(err) throw err;
-                        res.render('./dashboard/addStudent', {title: "Add Student", message:"Records added successfully", records:results})
+                        res.render('addStudent', {title: "Add Student", message:"Records added successfully", records:results})
                     });
             });
         }else {
-            res.render('./dashboard/addStudent', {title: "Add Student", message:"jpeg,png,gif only", records:results})
+            res.render('addStudent', {title: "Add Student", message:"jpeg,png,gif only", records:results})
         }
 };
 

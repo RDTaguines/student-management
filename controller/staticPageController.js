@@ -18,7 +18,7 @@ const login_view = (req, res) =>{
 
 //dashboard
 const dashboard_view = (req, res)=>{
-    res.render('dashboard/dashboardStudent', {title:"Student Dashboard"});
+    res.render('dashboardStudent', {title:"Student Dashboard"});
 }
 
 

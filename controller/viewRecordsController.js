@@ -5,7 +5,7 @@ const view_records = (req, res)=>{
     let sql = 'SELECT * FROM tblstudents';
     let query = newConnection.query(sql, (err, records)=>{
         if(err) throw err;
-        res.render('./dashboard/manageStudent', {
+        res.render('manageStudent', {
             header: "Manage Student",
             records: records
         })

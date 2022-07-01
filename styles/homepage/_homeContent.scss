@@ -53,6 +53,7 @@
 
         &__name{
             font-weight: map-get($font-weight, 'large');
+            color: $thirdColor;
         }
 
     }
