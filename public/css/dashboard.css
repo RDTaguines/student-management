@@ -1,0 +1,458 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body {
+    overflow-x: hidden;
+}
+body {
+    padding-top: 56px;
+    background: linear-gradient(rgba(255, 254, 254, 0.818),rgba(255, 255, 255, 0.795)),url(../img/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.sidebar{
+    position: fixed;
+    top: 76px;
+    bottom: 0;
+    right: 100%;
+    left: -300px;
+    width: 300px;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color:#DCD0D0;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+    align-items: start;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+    box-shadow: 5px 10px 8px #888888; 
+}
+
+
+
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.nav-scroller {
+    position: relative;
+    z-index: 0;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+    color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+    color: #DCD0D0;
+}
+
+.nav-underline .active {
+    font-weight: 500;
+    color: #343a40;
+}
+ul{
+    width: 100%;
+}
+a.nav-link{
+    background-color: #7C3E66;
+    color: #DCD0D0;
+    padding: 1rem 3rem 1rem 3rem;
+    margin: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 5px 10px 8px #888888; 
+    border-radius: 10px;
+}
+#logo{
+    height: 50px;
+    width: 250px;
+}
+
+/* dashboard */
+#dashboard{
+    height: 40rem;
+}
+
+#dashboard .row{
+    margin-top: 8rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    }
+
+#dashboard .row a{
+    padding: 1.8rem 3rem 1.8rem 3rem;
+    box-shadow: 5px 10px 8px #888888; 
+    font-size: 1.5rem;
+    background-color:#243A73 ;
+    color: #DCD0D0;
+}
+
+#dashboard h1{
+    font-size: 50px;
+    color:#243A73 ;
+    font-weight: 700;
+}
+
+/* add-student */ /* edit-student */
+.btn_back, .btn_save{
+    background-color:#243A73;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #888888; 
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+.btn_back:hover, .btn_save:hover{
+    text-decoration: none;
+    color: white;
+    background-color:#7C3E66;
+}
+.heading{
+    font-size: 50px;
+    color:#243A73 ;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.profile-details{
+    padding-top: 4rem;
+}
+.details{
+    margin-bottom: 1rem;
+}
+.details .label{
+    color: #243A73;
+    font-weight: bold;
+    font-size: 30px;
+}
+.d-inline{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 1rem;
+}
+.other-label{
+    color: #243A73;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.subject-title{
+    color: #7C3E66;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.img-responsive{
+    box-shadow: 5px 8px 5px #888888; 
+    margin-bottom: 15px;
+    height: 250px;
+    width: 250px;
+}
+/* manage-student */
+table .text-light{
+    background-color: #243A73;
+}
+table tbody{
+    background-color: white;
+}
+
+.btn_add{
+    background-color: #243A73;
+    padding: 0.8rem 3rem 0.8rem 3rem;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 5px 8px 5px #888888; 
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn_add:hover{
+    text-decoration: none;
+    color: white;
+    background-color:#7C3E66;
+}
+
+#search{
+    height: 50px;
+    border-radius: 12px;
+}
+.col-xl-3{
+    padding-top: 12px;
+}
+.overflow{
+    height: 35rem;
+    overflow: scroll;
+    
+}
+.heading{
+    font-size: 50px;
+    color:#243A73 ;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* view-student */
+.average{
+    color: #7C3E66;
+}
+.description{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+#div{
+    border: 1px solid black;
+}
+.form-group{
+    margin: 0;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+/* dashboard start */
+    .offcanvas-collapse {
+        align-items: start;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        box-shadow: 5px 10px 8px #888888; 
+
+    }
+
+    .offcanvas-collapse.open{
+        visibility: visible;
+        left: 0;
+    }
+
+    #welcome{
+        display: none;
+    }
+
+    #dashboard{
+        margin-top: 52px;
+    }
+    #dashboard .row{
+        margin-top: 4rem;
+    }
+    #dashboard .row a{
+        margin-bottom: 20px;
+        padding: 0.8rem 1rem 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    #dashboard h1{
+        font-size: 40px;
+        color:#243A73 ;
+        font-weight: 700;
+    }
+    #dashboard-subheading{
+        font-size: 21px;
+        margin-top: 30px;
+    }
+    
+/* dashboard end */
+
+
+/* add-student start */
+    .offcanvas-collapse {
+        align-items: start;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        box-shadow: 5px 10px 8px #888888; 
+    }
+
+    .offcanvas-collapse.open{
+        visibility: visible;
+        left: 0;
+    }
+
+    #welcome{
+        display: none;
+    }
+    .btn_save{
+        margin-bottom: 20px;
+    }
+
+    .details .label, .other-label{
+        font-size: 20px;
+    }
+
+    #add-heading{
+        font-size: 30px;
+    }
+
+    .btn_back{
+        padding: 0.8rem 2rem 0.8rem 2rem;
+    }
+    .btn_save{
+        padding: 0.8rem 1rem 0.8rem 1rem;
+
+    }
+    
+/* add-student end */
+
+/* edit-student start */
+    .offcanvas-collapse {
+        align-items: start;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        box-shadow: 5px 10px 8px #888888; 
+    }
+
+    .offcanvas-collapse.open{
+        visibility: visible;
+        left: 0;
+    }
+
+    #welcome{
+        display: none;
+    }
+
+    .img-responsive {
+        height: 350px;
+        width: 100%;
+    }
+
+    .profile-details {
+        padding-top: 2rem;
+    }
+
+    .btn_save{
+        margin-bottom: 20px;
+    }
+
+    .details .label, .other-label{
+        font-size: 20px;
+    }
+
+    #edit-heading{
+        font-size: 30px;
+    }
+
+    .btn_back{
+        padding: 0.8rem 2rem 0.8rem 2rem;
+    }
+
+    .btn_save{
+        padding: 0.8rem 1rem 0.8rem 1rem;
+    }
+
+    #subject-col{
+        padding-top: 0px;
+    }
+
+    #average{
+        margin-bottom: 5px;
+    }
+/* edit-student end */
+
+/* view-student start */
+
+    #view-heading{
+        font-size: 30px;
+    }
+
+    #grades-heading{
+        margin-left: 8rem;
+    }
+/* view-student end */
+
+/* manage-student start */
+    #manage-heading{
+        font-size: 30px;
+    }
+
+    .btn_add{
+        padding: 0.5rem 2rem 0.5rem 2rem;
+    }
+    .btn-info{
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+/* dashboard start */
+    .offcanvas-collapse {
+        align-items: start;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding;
+        background-clip: padding-box;
+        box-shadow: 5px 10px 8px #888888; 
+    }
+
+    .offcanvas-collapse.open{
+        visibility: visible;
+        left: 0;
+    }
+
+    #dashboard .row a{
+        margin-bottom: 45px;
+    }
+/* dashboard end */
+
+/* add-student start */
+    #add-heading{
+        font-size: 35px;
+    }
+
+    .details .label, .other-label{
+        font-size: 22px;
+    }
+
+    .btn_back{
+        padding: 0.8rem 2rem 0.8rem 2rem;
+    }
+    .btn_save{
+        padding: 0.8rem 1rem 0.8rem 1rem;
+
+    }
+
+/* add-student end */
+
+/* edit-student start */
+    .form-control #image_name{
+        width: 36%;
+    }
+}  
+/* edit-student end */
+
+@media screen and (min-width: 1200px){
+/* dashboard start */
+    .sidebar{
+        visibility: visible;
+        left: 0;
+    }
+/* dashboard end */
+}
+
